@@ -28,7 +28,7 @@
 |name|string|null: false|
 
 ### Association
-- belongs_to :groups_users
+- has many :groups_users
 - has_many :messages
 
 
