@@ -5,32 +5,31 @@
 |------|----|-------|
 |email|string|null: false|
 |password|string|null: false|
-|username|string|null: false|
+|name|string|null: false|
 ### Association
 - has_many :groups_users
-- has_many :massages
+- has_many :messages
+- has_many :groups
 
-## massagesテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
-|text|text|null: false|
+|text|text|
 |user_id|integer|null: false, foreign_key: true|
 ### Association
-- belongs_to :user
-- has_many :group
+- belongs_to :users
+- belongs_to :groups
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|groupname|text|
-|message_id|integer|null: false,
-foreign_key: true|
+|name|string|null: false|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups_users
+- has_many :messages
 
 
 ## groups_usersテーブル
