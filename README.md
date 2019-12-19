@@ -30,6 +30,7 @@
 ### Association
 - has many :groups_users
 - has_many :messages
+- belongs_to :users
 
 
 ## groups_usersテーブル
@@ -40,8 +41,8 @@
 |group_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :group
-- belongs_to :user
+- belongs_to :groups
+- belongs_to :users
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
