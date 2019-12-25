@@ -24,7 +24,6 @@
 - belongs_to :group
 
 ## groupsテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
@@ -34,9 +33,7 @@
 - has_many :users, through: :group_users
 - has_many :messages
 
-
 ## groups_usersテーブル
-
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|null: false, foreign_key: true|
