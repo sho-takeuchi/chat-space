@@ -37,12 +37,10 @@
       height: calc(100vh - 100px);
       color: white;
       &__group{
-        //background-color: red;
         height: 91px;
         width: 300px;
         position: relative;
         &__name{
-          //background-color: yellow;
           height: 15px;
           width: 260px;
           line-height: 15px;
@@ -50,7 +48,6 @@
           padding: 20px 20px;
         }
         &__message{
-          //background-color: green;
           position: absolute;
           height: 11px;
           width: 260px;
