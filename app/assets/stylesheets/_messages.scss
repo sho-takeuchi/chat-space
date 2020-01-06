@@ -127,20 +127,23 @@
       &__input-box{
         width: 100%;
         position: relative;
-        .input-box__text{
+        .new_message{
+          display: flex;
+        }
+        .form__message{
           height:50px;
           width:100%;
           padding: 0 40px 0 10px;
           color: #434A54;
           border-style: none;
         }
-        .input-box__image{
+        .form__mask__image{
           position: absolute;
           font-size: 1.3rem;
           top:10px;
-          right:10px;
+          right:120px;
           cursor: pointer;
-          .input-box__image__file{
+          .hidden{
             display: none;
           }
         }
