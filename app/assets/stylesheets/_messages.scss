@@ -36,6 +36,7 @@
       background-color:#2f3e51;
       height: calc(100vh - 100px);
       color: white;
+      overflow: scroll;
       &__group{
         height: 91px;
         width: 300px;
