@@ -2,7 +2,8 @@ $(function(){
 
   var buildHTML = function(message) {
     if (message.content && message.image) {
-      var html = `<div class="chat-main__message-list__messages" data-message-id=${message.id} >
+      var html = `<div class="message" data-message-id="${message.id}"></div>
+                  <div class="chat-main__message-list__messages">
                     <div class="chat-main__message-list__messages__upper-info"> 
                       <div class="chat-main__message-list__messages__upper-info__talker"> 
                         ${message.user_name} 
@@ -15,12 +16,13 @@ $(function(){
                       <p class="chat-main__message-list__messages__text__content">
                         ${message.content} 
                       </p> 
-                      <img src=${message.image} class="lower-message__image" >
+                      <img src="${message.image}" class="lower-message__image" >
                     </div> 
                   </div>`
     } 
     else if (message.content) {
-      var html = `<div class="chat-main__message-list__messages" data-message-id=${message.id}>
+      var html = `<div class="message" data-message-id="${message.id}"></div>
+                  <div class="chat-main__message-list__messages">
                     <div class="chat-main__message-list__messages__upper-info">
                       <div class="chat-main__message-list__messages__upper-info__talker">
                         ${message.user_name}
@@ -37,7 +39,8 @@ $(function(){
                   </div>`
     } 
     else if (message.image) {
-      var html = `<div class="chat-main__message-list__messages" data-message-id=${message.id}>
+      var html = `<div class="message" data-message-id="${message.id}"></div>
+                  <div class="chat-main__message-list__messages">
                     <div class="chat-main__message-list__messages__upper-info">
                       <div class="chat-main__message-list__messages__upper-info__talker">
                         ${message.user_name}
@@ -47,10 +50,10 @@ $(function(){
                       </div>
                     </div>
                     <div class="chat-main__message-list__messages__text">
-                      <img src=${message.image} "class="lower-message__image">
+                      <img src="${message.image}" "class="lower-message__image">
                     </div>
                   </div>`
-    };
+    }
     return html;
   };  
 
@@ -80,6 +83,7 @@ $(function(){
 
   var reloadMessages = function() {
     last_message_id = $('.message:last').data("message-id");
+    console.log(last_message_id)
     $.ajax({
       url: "api/messages",
       type: 'get',
