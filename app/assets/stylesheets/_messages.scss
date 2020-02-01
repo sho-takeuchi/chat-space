@@ -42,6 +42,7 @@
         width: 300px;
         position: relative;
         &__name{
+          color: #ffffff;
           height: 15px;
           width: 260px;
           line-height: 15px;
@@ -49,6 +50,7 @@
           padding: 20px 20px;
         }
         &__message{
+          color: #ffffff;
           position: absolute;
           height: 11px;
           width: 260px;
@@ -90,6 +92,9 @@
       color:#38aef0;
       padding: 28px 60px;
       line-height: 40px;
+      border: solid 1px #38aef0;
+      margin: 28px 40px;
+      padding: 0 20px;
     }
   }
   &__message-list{
